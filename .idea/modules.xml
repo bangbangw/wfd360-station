@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/microservice-common/microservice-common.iml" filepath="$PROJECT_DIR$/microservice-common/microservice-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-station-provider-1001/microservice-station-provider-1001.iml" filepath="$PROJECT_DIR$/microservice-station-provider-1001/microservice-station-provider-1001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wfd360-station.iml" filepath="$PROJECT_DIR$/wfd360-station.iml" />
+    </modules>
+  </component>
+</project>
