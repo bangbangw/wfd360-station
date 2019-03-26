@@ -18,7 +18,7 @@ public class TicketController {
     @Autowired
     private TicketService ticketService;
     /**
-     * 添加或者修改车票信息cghnghn
+     * 添加或者修改车票信息-V1111
      * @param ticket
      * @return
      */

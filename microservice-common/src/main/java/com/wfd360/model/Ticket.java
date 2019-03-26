@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Table(name="t_ticket")
 public class Ticket implements Serializable {
     /**
-     *序列号
+     *序列号b vmvh
      */
     private static final long serialVersionUID = 1L;
     @Id
