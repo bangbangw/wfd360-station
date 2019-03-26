@@ -4,10 +4,7 @@ import com.wfd360.model.Ticket;
 import com.wfd360.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,11 +18,12 @@ public class TicketController {
     @Autowired
     private TicketService ticketService;
     /**
-     * 添加或者修改车票信息
+     * 添加或者修改车票信息cghnghn
      * @param ticket
      * @return
      */
     @PostMapping(value="/save")
+    @ResponseBody
     public boolean save(Ticket ticket){
         try{
             ticketService.save(ticket);
@@ -40,8 +38,11 @@ public class TicketController {
      * @return
      */
     @GetMapping(value="/list")
+    @ResponseBody
     public List<Ticket> list(){
-        return ticketService.list();
+        List<Ticket> list = ticketService.list();
+
+        return list;
     }
 
     /**
@@ -49,6 +50,7 @@ public class TicketController {
      * @return
      */
     @GetMapping(value="/get/{id}")
+    @ResponseBody
     public Ticket get(@PathVariable("id") Integer id){
         return ticketService.findById(id);
     }
@@ -58,6 +60,7 @@ public class TicketController {
      * @return
      */
     @GetMapping(value="/delete/{id}")
+    @ResponseBody
     public boolean delete(@PathVariable("id") Integer id){
         try{
             ticketService.delete(id);
