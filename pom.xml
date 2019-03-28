@@ -10,6 +10,7 @@
     <modules>
         <module>microservice-common</module>
         <module>microservice-station-provider-1001</module>
+        <module>microservice-station-consumer-80</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

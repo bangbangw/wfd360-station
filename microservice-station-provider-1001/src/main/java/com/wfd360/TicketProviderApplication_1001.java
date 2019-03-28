@@ -1,7 +1,7 @@
 package com.wfd360;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+        import org.springframework.boot.SpringApplication;
+        import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Created by 姿势帝-博客园 on 2019/3/25.
@@ -15,5 +15,6 @@ public class TicketProviderApplication_1001 {
      */
     public static void main(String[] args) {
         SpringApplication.run(TicketProviderApplication_1001.class, args);
+
     }
 }

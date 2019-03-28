@@ -41,7 +41,6 @@ public class TicketController {
     @ResponseBody
     public List<Ticket> list(){
         List<Ticket> list = ticketService.list();
-
         return list;
     }
 

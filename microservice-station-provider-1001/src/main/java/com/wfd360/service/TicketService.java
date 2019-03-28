@@ -12,9 +12,9 @@ import java.util.List;
 public interface TicketService {
     /**
      * 添加或者修改车票信息
-     * @param student
+     * @param ticket
      */
-    public void save(Ticket student);
+    public void save(Ticket ticket);
 
     /**
      * 根据id查找车票信息
