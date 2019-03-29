@@ -23,6 +23,12 @@ public class TicketConsumerController {
     private RestTemplate restTemplate;
 
     /**
+     *服务提供者名称  microservice-ticket
+     * 服务调用者这边的控制器里 url =  http://MICROSERVICE-TICKET
+     */
+    private static final String URL="http://MICROSERVICE-TICKET/ticket";
+
+    /**
      * 添加或者修改车票信息
      *
      * @param ticket
@@ -32,7 +38,8 @@ public class TicketConsumerController {
     @ResponseBody
     public boolean save(Ticket ticket) {
         System.out.println("======su=====save=========");
-        return restTemplate.postForObject("http://localhost:1001/ticket/save", ticket, Boolean.class);
+       // return restTemplate.postForObject("http://localhost:1001/ticket/save", ticket, Boolean.class);
+        return restTemplate.postForObject(URL+"/save", ticket, Boolean.class);
     }
 
     /**
@@ -44,7 +51,8 @@ public class TicketConsumerController {
     @GetMapping(value = "/list")
     @ResponseBody
     public List<Ticket> list() {
-        return restTemplate.getForObject("http://localhost:1001/ticket/list", List.class);
+       // return restTemplate.getForObject("http://localhost:1001/ticket/list", List.class);
+        return restTemplate.getForObject(URL+"/list", List.class);
     }
 
     /**
@@ -55,7 +63,8 @@ public class TicketConsumerController {
     @GetMapping(value = "/get/{id}")
     @ResponseBody
     public Ticket get(@PathVariable("id") Integer id) {
-        return restTemplate.getForObject("http://localhost:1001/ticket/get/" + id, Ticket.class);
+       // return restTemplate.getForObject("http://localhost:1001/ticket/get/" + id, Ticket.class);
+        return restTemplate.getForObject(URL+"/get/" + id, Ticket.class);
     }
 
     /**
@@ -67,7 +76,8 @@ public class TicketConsumerController {
     @ResponseBody
     public boolean delete(@PathVariable("id") Integer id) {
         try {
-            restTemplate.getForObject("http://localhost:1001/ticket/delete/" + id, Boolean.class);
+           // restTemplate.getForObject("http://localhost:1001/ticket/delete/" + id, Boolean.class);
+            restTemplate.getForObject(URL+"/delete/" + id, Boolean.class);
             return true;
         } catch (Exception e) {
             return false;
