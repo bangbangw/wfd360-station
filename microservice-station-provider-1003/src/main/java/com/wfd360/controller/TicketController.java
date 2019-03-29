@@ -41,9 +41,9 @@ public class TicketController {
     @ResponseBody
     public List<Ticket> list(){
         //测试用，用于区分是哪一个服务提供者
-        System.out.println("=======1001============="); //后端需区分
+        System.out.println("=======1003============="); //后端需区分
         Ticket ticket = new Ticket();
-        ticket.setStartStation("--1001服务提供-"); //前段区分
+        ticket.setStartStation("--1003服务提供-"); //前段区分
 
         List<Ticket> list = ticketService.list();
         list.add(ticket);
