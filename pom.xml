@@ -16,6 +16,7 @@
         <module>microservice-eureka-server-2003</module>
         <module>microservice-station-provider-1002</module>
         <module>microservice-station-provider-1003</module>
+        <module>microservice-station-consumer-feign-80</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
