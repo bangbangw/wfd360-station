@@ -2,6 +2,26 @@ server:
   port: 80
   context-path: /
 
+# hystrix支持
+feign:
+  hystrix:
+    enabled: true
+
+# 修改 ribbon 默认 超时时间设置
+# feign 有一个超时时间的设置，当然feign底层是 ribbon的封装，所以 直接配置ribbon，ribbon默认超时也是1秒。
+#这里都是强制要求，ribbon的超时时间要大于hystrix的超时时间，否则 hystrix自定义的超时时间毫无意义
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 9000
+# 修改 hystrix 默认 超时时间设置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+
 # 客户端负载均衡配置
 eureka:
   client:

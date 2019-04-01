@@ -17,6 +17,7 @@
         <module>microservice-station-provider-1002</module>
         <module>microservice-station-provider-1003</module>
         <module>microservice-station-consumer-feign-80</module>
+        <module>microservice-station-provider-hystrix-1004</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

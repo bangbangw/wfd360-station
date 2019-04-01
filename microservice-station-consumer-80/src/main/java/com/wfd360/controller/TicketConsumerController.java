@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by 姿势帝-博客园 on 2019/3/26.
@@ -82,5 +83,16 @@ public class TicketConsumerController {
         } catch (Exception e) {
             return false;
         }
+    }
+    /**
+     * 锁票业务
+     * @return
+     */
+    @SuppressWarnings("unchecked")
+    @GetMapping(value="/lockTicket")
+    @ResponseBody
+    public Map<String,Object> lockTicket(){
+        System.out.println("-----调用锁票远程服务接口---------");
+        return restTemplate.getForObject(URL+"/lockTicket/", Map.class);
     }
 }

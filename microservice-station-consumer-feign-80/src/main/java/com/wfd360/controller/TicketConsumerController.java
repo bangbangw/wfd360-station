@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by 姿势帝-博客园 on 2019/3/26.
@@ -74,5 +75,17 @@ public class TicketConsumerController {
         } catch (Exception e) {
             return false;
         }
+    }
+    /**
+     * 索票
+     * @return
+     */
+    @GetMapping(value="/lockTicket")
+    @ResponseBody
+    public Map<String,Object> lockTicket(){
+        System.out.println("------调用锁票业务------------");
+        Map<String, Object> stringObjectMap = ticketClientService.lockTicket();
+        System.out.println("------stringObjectMap------------"+stringObjectMap);
+        return stringObjectMap;
     }
 }

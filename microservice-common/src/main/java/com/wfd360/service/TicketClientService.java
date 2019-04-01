@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by 姿势帝-博客园 on 2019/3/29.
@@ -16,7 +17,8 @@ import java.util.List;
 /**
  * feign客户端接口
  */
-@FeignClient(value = "MICROSERVICE-TICKET") //调用的服务名称
+//@FeignClient(value = "MICROSERVICE-TICKET") //调用的服务名称
+@FeignClient(value="MICROSERVICE-TICKET",fallbackFactory=TicketClientFallbackFactory.class)
 public interface TicketClientService {
     /**
      * 根据id查询车票信息
@@ -51,4 +53,10 @@ public interface TicketClientService {
      */
     @GetMapping(value = "/ticket/delete/{id}")
     public boolean delete(@PathVariable("id") Integer id);
+    /**
+     * 索票业务
+     * @return
+     */
+    @GetMapping(value="/ticket/lockTicket")
+    public Map<String,Object> lockTicket();
 }
