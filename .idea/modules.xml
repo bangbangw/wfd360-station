@@ -3,7 +3,15 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/microservice-common/microservice-common.iml" filepath="$PROJECT_DIR$/microservice-common/microservice-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-eureka-server-2001/microservice-eureka-server-2001.iml" filepath="$PROJECT_DIR$/microservice-eureka-server-2001/microservice-eureka-server-2001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-eureka-server-2002/microservice-eureka-server-2002.iml" filepath="$PROJECT_DIR$/microservice-eureka-server-2002/microservice-eureka-server-2002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-eureka-server-2003/microservice-eureka-server-2003.iml" filepath="$PROJECT_DIR$/microservice-eureka-server-2003/microservice-eureka-server-2003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-station-consumer-80/microservice-station-consumer-80.iml" filepath="$PROJECT_DIR$/microservice-station-consumer-80/microservice-station-consumer-80.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-station-consumer-feign-80/microservice-station-consumer-feign-80.iml" filepath="$PROJECT_DIR$/microservice-station-consumer-feign-80/microservice-station-consumer-feign-80.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-station-provider-1001/microservice-station-provider-1001.iml" filepath="$PROJECT_DIR$/microservice-station-provider-1001/microservice-station-provider-1001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-station-provider-1002/microservice-station-provider-1002.iml" filepath="$PROJECT_DIR$/microservice-station-provider-1002/microservice-station-provider-1002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-station-provider-1003/microservice-station-provider-1003.iml" filepath="$PROJECT_DIR$/microservice-station-provider-1003/microservice-station-provider-1003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-station-provider-hystrix-1004/microservice-station-provider-hystrix-1004.iml" filepath="$PROJECT_DIR$/microservice-station-provider-hystrix-1004/microservice-station-provider-hystrix-1004.iml" />
       <module fileurl="file://$PROJECT_DIR$/wfd360-station.iml" filepath="$PROJECT_DIR$/wfd360-station.iml" />
     </modules>
   </component>
